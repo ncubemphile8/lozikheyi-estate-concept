@@ -8,7 +8,7 @@ import { useMemo } from "react";
 type HouseType = "b" | "c" | "d";
 const mat = { glass:"#405b61", frame:"#202a29", plaster:"#e7e0d3", stone:"#a99b83", timber:"#76563b", dark:"#252c2a", gold:"#b99b63", green:"#697b59" };
 function Block({p,s,c,rz=0}:{p:[number,number,number];s:[number,number,number];c:string;rz?:number}) {
- return <mesh position={p} rotation={[0,0,rz]} castShadow receiveShadow><boxGeometry args={s}/><meshStandardMaterial color={c} roughness={c===mat.glass?.22:.82} metalness={c===mat.glass?.18:.05}/></mesh>;
+ return <mesh position={p} rotation={[0,0,rz]} castShadow receiveShadow><boxGeometry args={s}/><meshStandardMaterial color={c} roughness={c === mat.glass ? 0.22 : 0.82} metalness={c === mat.glass ? 0.18 : 0.05}/></mesh>;
 }
 function Window({p,w=1.8,h=1.35,vertical=false}:{p:[number,number,number];w?:number;h?:number;vertical?:boolean}) {
  return <group position={p} rotation={[0,vertical?Math.PI/2:0,0]}>
