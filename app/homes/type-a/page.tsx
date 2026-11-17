@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
-const StarterHouse3D = dynamic(() => import("../../../components/StarterHouse3D"), { ssr: false });
+const StarterHouse3D = dynamic(() => import("../../../components/StarterHouse3D"), { ssr: false, loading: () => <div className="starter-viewer viewer-loading">Preparing interactive 3D model…</div> });
 
 export default function TypeAPage() {
   return (
