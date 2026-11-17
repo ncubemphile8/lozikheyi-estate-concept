@@ -62,7 +62,7 @@ export default function HomePage() {
 
       <section className="homes-strip" id="homes">
         <div className="homes-intro"><p className="eyebrow">DESIGNED FOR DIFFERENT LIVES</p><h2>Explore our<br/><em>house designs.</em></h2><p>Four conceptual home types, from considered essentials to spacious contemporary living.</p><a href="#contact">Discuss a house type <ArrowUpRight size={15}/></a></div>
-        {homes.map((home, i) => <article className="home-card" key={home.type}><div className="home-image" style={{backgroundImage: `url("${home.image}")`}}><span>{home.type}</span><button aria-label={`Explore ${home.name}`} onClick={() => document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"})}><ArrowUpRight/></button></div><div className="home-card-info"><div><h3>{home.name}</h3><p>{home.detail} <span>·</span> {home.area}</p></div><small>{home.note}</small></div></article>)}
+        {homes.map((home, i) => <article className="home-card" key={home.type}><div className="home-image" style={{backgroundImage: `url("${home.image}")`}}><span>{home.type}</span><button aria-label={`Explore ${home.name}`} onClick={() => { if (i === 0) window.location.href = "/homes/type-a"; else document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"}); }}><ArrowUpRight/></button></div><div className="home-card-info"><div><h3>{home.name}</h3><p>{home.detail} <span>·</span> {home.area}</p></div><small>{home.note}</small></div></article>)}
       </section>
 
       <section className="benefits" id="about">
