@@ -42,7 +42,7 @@ export default function TypeAPage() {
           <aside><span>75 m²</span><b>Indicative internal floor area</b><p>2 bedrooms · 1 shared bathroom · open-plan living · kitchen · covered entrance verandah</p></aside>
         </div>
       </section>
-      <section className="type-note"><h2>Explore the design</h2><p>This is an early massing model to demonstrate the interactive 3D experience. Room layout, dimensions, structure, finishes and construction details still need architectural development and professional review.</p><Link href="/#contact">Discuss this house type <ArrowUpRight size={16}/></Link></section>
+      <section className="type-note"><h2>Explore the design</h2><p>This is an early massing model to demonstrate the interactive 3D experience. Room layout, dimensions, structure, finishes and construction details still need architectural development and professional review.</p><div className="type-quote-actions"><a href="https://wa.me/263790033586?text=Hello%2C%20I%27d%20like%20to%20request%20a%20quote%20for%20The%20Starter%20at%20Lozikheyi%20Estate." target="_blank" rel="noopener noreferrer">Request a quote on WhatsApp <ArrowUpRight size={15}/></a><a href="tel:+263790033586">Call +263 79 003 3586</a></div><Link href="/#contact">Discuss this house type <ArrowUpRight size={16}/></Link></section>
       <footer><span>VanillaWebz · Interactive architectural concept</span><span>Illustrative model only · Not construction documentation</span></footer>
     </main>
   );
