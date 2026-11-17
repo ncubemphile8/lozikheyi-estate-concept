@@ -129,7 +129,7 @@ function FamilyHouse() {
     <Block p={[6.15, .72, -2.8]} s={[.9, .78, .38]} color="#d1cec4"/>
     {[-.26, -.1, .06, .22].map(x => <Block key={x} p={[6.15 + x, .72, -2.58]} s={[.025, .55, .025]} color="#7a8178"/>)}
     {/* Front wall lights and driveway */}
-    <WallLight p={[-2.25, 2.3, 4.5}/><WallLight p={[4.95, 2.3, 4.5}/>
+    <WallLight p={[-2.25, 2.3, 4.5]}/><WallLight p={[4.95, 2.3, 4.5]}/>
     <Block p={[-5.2, .02, 6.45]} s={[4.3, .1, 4.6]} color="#aaa99e"/>
     <Block p={[5.25, .02, 6.8]} s={[4.1, .1, 5.2]} color="#aaa99e"/>
     <Block p={[5.25, .1, 7.4]} s={[4.1, .08, .16]} color="#d4cdbc"/>
@@ -174,7 +174,7 @@ function ExecutiveHouse() {
     <Pergola x={-5.7} z={4.1} width={3.2} depth={3.1} height={2.85}/>
     {/* Decorative horizontal reveal and wall sconces */}
     <Block p={[-2.25, 2.65, 4.91]} s={[10.5, .06, .07]} color={palette.gold}/>
-    <WallLight p={[-5.85, 2.1, 4.9}/><WallLight p={[5.8, 2.6, 3.28}/>
+    <WallLight p={[-5.85, 2.1, 4.9]}/><WallLight p={[5.8, 2.6, 3.28]}/>
     {/* Reflecting pool, paving and solar panels */}
     <Block p={[-5.7, .06, 6.5]} s={[3.7, .14, 2.8]} color="#72817d" roughness={.2}/>
     <Block p={[-5.7, .15, 6.5]} s={[3.2, .035, 2.35]} color="#42616a" roughness={.12} metalness={.2}/>
@@ -226,7 +226,7 @@ function SignatureHouse() {
     {/* Broad steps, driveway, lighting and garden */}
     {[-1, 0, 1].map(n => <Block key={n} p={[2.8 + n * .8, .14, 7.65]} s={[.68, .13, .48]} color="#e1dbcc"/>)}
     <Block p={[7.4, .02, -8.9]} s={[7.4, .1, 4.1]} color="#aaa99e"/>
-    <WallLight p={[-5.1, 2.3, 5.63}/><WallLight p={[5.55, 2.25, 5.63}/>
+    <WallLight p={[-5.1, 2.3, 5.63]}/><WallLight p={[5.55, 2.25, 5.63]}/>
     <SolarArray x={-2.8} z={-3.15} width={1.75} count={3}/>
     <Tree p={[-11, 0, -7]} scale={1.15}/><Tree p={[11, 0, -8]} scale={1.1}/>
     {[-7, 7].map(x => <Shrub key={x} p={[x, .08, 6.4]} scale={1.15}/>)}
