@@ -38,9 +38,9 @@ export default function HomePage() {
         <div className="hero-shade" />
         <div className="hero-copy">
           <p className="eyebrow"><span/> RESIDENTIAL DEVELOPMENT CONCEPT</p>
-          <h1>Find your place<br/><em>to belong.</em></h1>
-          <p className="hero-sub">A considered vision for modern living in<br className="desktop-break"/> Lower Rangemore, Bulawayo.</p>
-          <p className="hero-desc">Explore a residential community concept shaped around thoughtful homes, connected spaces and a sense of place.</p>
+          <h1>Lozikheyi<br/><em>Estate.</em></h1>
+          <p className="hero-sub">A residential community concept in<br className="desktop-break"/> Lower Rangemore, Bulawayo.</p>
+          <p className="hero-desc">Discover the proposed entrance, explore illustrative stand layouts and experience four contemporary home concepts.</p>
           <div className="hero-facts">
             <div><MapPin/><span><b>Lower Rangemore</b><small>Bulawayo, Zimbabwe</small></span></div>
             <div><Layers3/><span><b>216–526 m²</b><small>Illustrative stand range</small></span></div>
