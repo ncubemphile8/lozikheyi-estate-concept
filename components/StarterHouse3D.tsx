@@ -46,12 +46,14 @@ function HouseModel() {
       <mesh position={[3.05,1.57,3.78]} castShadow><boxGeometry args={[2.75,2.65,.24]}/><meshStandardMaterial color={plaster}/></mesh>
       <mesh position={[-.08,2.77,3.78]}><boxGeometry args={[3.85,.25,.24]}/><meshStandardMaterial color={plaster}/></mesh>
 
-      {/* roof slab, overhang and parapet */}
-      <mesh position={[0,2.98,0]} castShadow><boxGeometry args={[9.85,.28,8.65]}/><meshStandardMaterial color={charcoal} roughness={.7}/></mesh>
-      <mesh position={[0,3.17,-4.12]}><boxGeometry args={[9.7,.28,.16]}/><meshStandardMaterial color={charcoal}/></mesh>
-      <mesh position={[-4.72,3.17,0]}><boxGeometry args={[.16,.28,8.3]}/><meshStandardMaterial color={charcoal}/></mesh>
-      <mesh position={[4.72,3.17,0]}><boxGeometry args={[.16,.28,8.3]}/><meshStandardMaterial color={charcoal}/></mesh>
-      <mesh position={[0,2.89,0]}><boxGeometry args={[10.1,.1,8.9]}/><meshStandardMaterial color="#343a37"/></mesh>
+      {/* asymmetric low-pitch roof: a different silhouette from the other house types */}
+      <mesh position={[0,3.28,-2.12]} rotation={[-.18,0,0]} castShadow><boxGeometry args={[10.15,.2,4.55]}/><meshStandardMaterial color={charcoal} roughness={.68}/></mesh>
+      <mesh position={[0,3.28,2.12]} rotation={[.18,0,0]} castShadow><boxGeometry args={[10.15,.2,4.55]}/><meshStandardMaterial color={charcoal} roughness={.68}/></mesh>
+      <mesh position={[0,3.68,0]}><boxGeometry args={[10.28,.14,.28]}/><meshStandardMaterial color="#343a37"/></mesh>
+      <mesh position={[0,2.92,4.22]}><boxGeometry args={[10.2,.16,.2]}/><meshStandardMaterial color="#343a37"/></mesh>
+      <mesh position={[0,2.92,-4.22]}><boxGeometry args={[10.2,.16,.2]}/><meshStandardMaterial color="#343a37"/></mesh>
+      <mesh position={[-4.94,3.12,0]}><boxGeometry args={[.16,.2,8.45]}/><meshStandardMaterial color="#343a37"/></mesh>
+      <mesh position={[4.94,3.12,0]}><boxGeometry args={[.16,.2,8.45]}/><meshStandardMaterial color="#343a37"/></mesh>
 
       {/* entrance recess, timber door and porch canopy */}
       <mesh position={[-.08,1.35,3.93]} castShadow><boxGeometry args={[1.48,2.22,.12]}/><meshStandardMaterial color={timber} roughness={.6}/></mesh>
