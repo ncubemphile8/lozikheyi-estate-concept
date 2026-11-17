@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import MasterplanExplorer from "../components/MasterplanExplorer";
+import dynamic from "next/dynamic";
+const EntranceGate3D = dynamic(() => import("../components/EntranceGate3D"), { ssr: false, loading: () => <div className="entrance-viewer viewer-loading">Preparing interactive entrance model…</div> });
 import { ArrowRight, ArrowUpRight, Compass, Download, House, Layers3, Map, MapPin, Menu, Play, ShieldCheck, Trees, Waves, X, Zap, ZoomIn, ZoomOut } from "lucide-react";
 
 const homes = [
@@ -55,7 +57,7 @@ export default function HomePage() {
           <p><Layers3/> Interactive masterplan</p><p><House/> House design collection</p><p><Download/> Brochure concept</p>
           <small>All statuses are illustrative.</small>
         </aside>
-        <div className="hero-controls"><button className={view === "3D View" ? "selected" : ""} onClick={() => setView("3D View")}><Layers3/> 3D View</button><button className={view === "2D Map" ? "selected" : ""} onClick={() => setView("2D Map")}><Map/> 2D Map</button><button className={view === "Street View" ? "selected" : ""} onClick={() => setView("Street View")}><Compass/> Street View</button><span className="view-note">{view === "Street View" ? "Street-view concept" : view === "2D Map" ? "Plan view concept" : "Aerial concept view"}</span></div>
+        <div className="hero-controls"><button className={view === "3D View" ? "selected" : ""} onClick={() => { setView("3D View"); document.getElementById("entrance")?.scrollIntoView({behavior:"smooth"}); }}><Layers3/> 3D View</button><button className={view === "2D Map" ? "selected" : ""} onClick={() => { setView("2D Map"); document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"}); }}><Map/> 2D Map</button><button className={view === "Street View" ? "selected" : ""} onClick={() => { setView("Street View"); document.getElementById("entrance")?.scrollIntoView({behavior:"smooth"}); }}><Compass/> Street View</button><span className="view-note">{view === "Street View" ? "Street-view concept" : view === "2D Map" ? "Plan view concept" : "Aerial concept view"}</span></div>
         <div className="hero-zoom"><button onClick={() => setZoom(Math.max(.85, zoom-.1))}><ZoomOut/></button><button onClick={() => setZoom(Math.min(1.25, zoom+.1))}><ZoomIn/></button></div>
         <div className="hero-caption">VISUAL CONCEPT · NOT AN APPROVED ESTATE RENDER</div>
       </section>
@@ -69,6 +71,7 @@ export default function HomePage() {
         <div><ShieldCheck/><span><b>Considered security</b><small>A vision for peace of mind</small></span></div><div><Waves/><span><b>Connected services</b><small>Infrastructure information</small></span></div><div><Zap/><span><b>Everyday convenience</b><small>Thoughtful estate planning</small></span></div><div><Trees/><span><b>Green open spaces</b><small>Room to breathe and connect</small></span></div>
       </section>
 
+      <section className="entrance-section" id="entrance"><div className="section-heading"><div><p className="eyebrow">THE ARRIVAL EXPERIENCE</p><h2>A welcome with <em>identity.</em></h2><p>Explore a proposed entrance concept with the estate name integrated into the monument signage.</p></div><div className="concept-tag">ILLUSTRATIVE 3D GATE DESIGN</div></div><EntranceGate3D /><div className="entrance-caption"><b>LOZIKHEYi ESTATE · BULAWAYO</b><span>Concept signage and gate architecture for presentation only. Final design and naming require estate approval.</span></div></section>
       <section className="masterplan-section" id="masterplan">
         <div className="section-heading"><div><p className="eyebrow">EXPLORE THE DEVELOPMENT</p><h2>A closer look at <em>the plan.</em></h2><p>Select a sample plot to preview how an interactive estate explorer could work.</p></div><div className="concept-tag">DEMONSTRATION DATA ONLY</div></div>
         <MasterplanExplorer />
