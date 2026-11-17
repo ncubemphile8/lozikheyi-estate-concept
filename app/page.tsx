@@ -4,7 +4,7 @@ import { useState } from "react";
 import MasterplanExplorer from "../components/MasterplanExplorer";
 import dynamic from "next/dynamic";
 const EntranceGate3D = dynamic(() => import("../components/EntranceGate3D"), { ssr: false, loading: () => <div className="entrance-viewer viewer-loading">Preparing interactive entrance model…</div> });
-import { ArrowRight, ArrowUpRight, Compass, Download, House, Layers3, Map, MapPin, Menu, Play, ShieldCheck, Trees, Waves, X, Zap, ZoomIn, ZoomOut } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Compass, Download, House, Layers3, Map, MapPin, Menu, Play, ShieldCheck, Trees, Waves, X, Zap } from "lucide-react";
 
 const homes = [
   { type: "TYPE A", name: "The Starter", detail: "2 Bed  ·  1 Bath", area: "75 m²", note: "Thoughtfully compact", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" },
