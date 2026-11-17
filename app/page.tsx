@@ -28,7 +28,7 @@ export default function HomePage() {
         </a>
         <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X/> : <Menu/>}</button>
         <nav className={menuOpen ? "nav nav-open" : "nav"}>
-          <a className="active" href="#home" onClick={() => setMenuOpen(false)}>Home</a><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a href="#masterplan" onClick={() => setMenuOpen(false)}>Masterplan</a><a href="#homes" onClick={() => setMenuOpen(false)}>House Designs</a><a href="#investment" onClick={() => setMenuOpen(false)}>Investment</a><a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <a className="active" href="#home" onClick={() => setMenuOpen(false)}>Home</a><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a href="#masterplan" onClick={() => setMenuOpen(false)}>Masterplan</a><a href="#homes" onClick={() => setMenuOpen(false)}>House Designs</a><a href="#investment" onClick={() => setMenuOpen(false)}>Investment</a><a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a><a href="#faq" onClick={() => setMenuOpen(false)}>FAQs</a><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
         <a className="enquire" href="#contact"><span>◉</span> Enquire Now <ArrowUpRight size={15}/></a>
       </header>
@@ -86,6 +86,15 @@ export default function HomePage() {
         </div>
       </section>
       <section className="investment" id="investment"><div><p className="eyebrow">A PLACE TO CALL YOUR OWN</p><h2>Make room for<br/><em>what comes next.</em></h2><p>Explore the concept, discover the home collection and speak with the team about official development information.</p><a className="gold-button" href="#contact">Start a conversation <ArrowRight size={16}/></a></div><div className="investment-image"/></section>
+      <section className="faq-section" id="faq">
+        <div className="section-heading"><div><p className="eyebrow">HELPFUL INFORMATION</p><h2>Good to <em>know.</em></h2><p>A few useful starting points before you make an enquiry.</p></div><div className="concept-tag">DEVELOPMENT DETAILS TO BE CONFIRMED</div></div>
+        <div className="faq-list">
+          <details><summary>How do I request a quotation?</summary><p>Use the WhatsApp quote button below or call the supplied contact number. Share whether your enquiry is about a stand, a house design or another development requirement.</p></details>
+          <details><summary>Are the stands shown on the masterplan available?</summary><p>No live availability is connected to this demonstration. Plot positions, sizes and status colours are sample data only. Ask the estate team for the current approved availability schedule.</p></details>
+          <details><summary>Are the house designs approved construction plans?</summary><p>No. The four house types are architectural concepts for presentation. They require professional design development, site-specific checks and the appropriate approvals before construction.</p></details>
+          <details><summary>Where can I get confirmed pricing and servicing information?</summary><p>Contact the estate team directly. Pricing, stand dimensions, title and servicing information should be confirmed from current official estate documentation.</p></details>
+        </div>
+      </section>
       <section className="contact" id="contact"><p className="eyebrow">LET'S TALK</p><h2>Your next chapter<br/><em>starts here.</em></h2><p>Interested in a stand, a house design or a development quotation? Contact the team directly on WhatsApp. Official availability, pricing and servicing details will be confirmed by the estate.</p><div className="contact-actions"><a className="gold-button" href="https://wa.me/263790033586?text=Hello%2C%20I%27d%20like%20to%20request%20a%20quote%20and%20more%20information%20about%20Lozikheyi%20Estate." target="_blank" rel="noopener noreferrer">Request a quote on WhatsApp <ArrowUpRight size={16}/></a><a className="outline-button" href="tel:+263790033586">Call +263 79 003 3586</a></div></section>
       <footer><a className="brand footer-brand" href="#home"><span className="brand-mark"><svg viewBox="0 0 72 56"><path d="M5 27 36 5l31 22M14 29v21h44V29M25 50V36l11-8 11 8v14"/></svg></span><span className="brand-name">LOZIKHEYi<span>ESTATE · BULAWAYO</span></span></a><p>Enquiries: <a href="https://wa.me/263790033586" target="_blank" rel="noopener noreferrer">+263 79 003 3586</a> · Concept experience by <b>VanillaWebz</b></p><small>Independent demonstration · Not an official estate website</small><a href="#home" className="back-top">Back to top ↑</a></footer>
     </main>
