@@ -34,9 +34,9 @@ export default function HomePage() {
 
       <section className="hero" id="home">
         <video className="hero-video" autoPlay muted loop playsInline preload="metadata"
-          poster="https://images.pexels.com/videos/35425068/pexels-photo-35425068.jpeg?auto=compress&w=1260&h=750&dpr=1"
+          poster="https://images.pexels.com/videos/32494366/10-bit-video-4k-drone-shot-4k-drone-video-4k-video-copyright-free-32494366.jpeg?auto=compress&w=1260&h=750&dpr=1"
           aria-label="Illustrative aerial footage of a residential neighbourhood">
-          <source src="https://videos.pexels.com/video-files/35425068/15009305_1920_1080_30fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/32494366/13856315_2560_1440_60fps.mp4" type="video/mp4" />
         </video>
         <div className="hero-shade" />
         <div className="hero-copy">
