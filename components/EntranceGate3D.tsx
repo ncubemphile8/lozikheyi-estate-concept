@@ -39,7 +39,8 @@ function GateStructure() {
     {[-6.6,6.6,9.2,-9.2].map((x,i)=><pointLight key={i} position={[x,3.5,i===3?-3:1]} color="#f4cb79" intensity={i===2?18:8} distance={7}/>)}
     <mesh position={[0,.02,7.6]}><boxGeometry args={[7,.05,2.4]}/><meshStandardMaterial color="#b4ad9d"/></mesh>
     <mesh position={[9.2,.03,2.8]}><boxGeometry args={[5,.06,2.5]}/><meshStandardMaterial color="#a39d8d"/></mesh>
-  </group>;
+  </group>
+  );
 }
 
 export default function EntranceGate3D() {
