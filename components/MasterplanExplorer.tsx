@@ -14,7 +14,7 @@ const plots: Plot[] = [
   { id: "B02", status: "Sold", size: 310, points: "590,72 695,88 675,160 575,145" },
   { id: "B03", status: "Available", size: 400, points: "710,91 810,112 780,185 685,162" },
   { id: "C01", status: "Reserved", size: 450, points: "110,345 220,325 245,405 130,430" },
-  { id: "C02", status: "Available", size: 526, points: "245,320 365,300 385,380 270,405" },
+  { id: "C02", status: "Available", size: 480, points: "245,320 365,300 385,380 270,405" },
   { id: "C03", status: "Available", size: 216, points: "400,295 510,285 525,360 415,380" },
   { id: "C04", status: "Sold", size: 275, points: "545,285 655,300 635,380 530,360" },
 ];
