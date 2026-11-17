@@ -91,6 +91,26 @@ function HouseModel() {
       <Shrub position={[5.5,.02,-3.8]} scale={1.15}/>
       {/* driveway apron */}
       <mesh position={[5.1,-.015,5.45]}><boxGeometry args={[3.3,.08,3.8]}/><meshStandardMaterial color="#aaa99e"/></mesh>
+      {/* finer architectural detailing: parapet caps, rainwater goods and wall sconces */}
+      <mesh position={[0,3.31,4.18]}><boxGeometry args={[9.95,.09,.2]}/><meshStandardMaterial color="#424945"/></mesh>
+      <mesh position={[4.82,1.48,3.25]}><boxGeometry args={[.09,2.85,.09]}/><meshStandardMaterial color="#666c62"/></mesh>
+      <mesh position={[-4.82,1.48,3.25]}><boxGeometry args={[.09,2.85,.09]}/><meshStandardMaterial color="#666c62"/></mesh>
+      {[-3.95,3.95].map(x => <group key={x} position={[x,2.25,4.08]}><mesh><boxGeometry args={[.22,.34,.12]}/><meshStandardMaterial color="#b99b63" metalness={.35}/></mesh><pointLight position={[0,-.12,.25]} color="#f5d59a" intensity={1.1} distance={3}/></group>)}
+      <mesh position={[4.05,1.52,4.05]}><boxGeometry args={[.48,2.78,.4]}/><meshStandardMaterial color="#a99b83" roughness={1}/></mesh>
+      <mesh position={[-2.85,2.65,3.98]}><boxGeometry args={[2.35,.07,.08]}/><meshStandardMaterial color="#b99b63"/></mesh>
+      {/* screened service equipment */}
+      <mesh position={[5.05,.72,-2.8]} castShadow><boxGeometry args={[.9,.8,.42]}/><meshStandardMaterial color="#d4d0c6" metalness={.15}/></mesh>
+      {[-.25,-.1,.05,.2].map(x=><mesh key={x} position={[5.05+x,.72,-2.56]}><boxGeometry args={[.025,.58,.025]}/><meshStandardMaterial color="#777d76"/></mesh>)}
+      {/* paved pedestrian approach and defined planting edges */}
+      <mesh position={[-.08,.02,6.25]}><boxGeometry args={[3.3,.1,3.1]}/><meshStandardMaterial color="#b9b5a9"/></mesh>
+      <mesh position={[-.08,.08,7.7]}><boxGeometry args={[2.9,.06,.16]}/><meshStandardMaterial color="#d8d0c0"/></mesh>
+      <mesh position={[-3.05,.1,5.15]}><boxGeometry args={[2.65,.1,.12]}/><meshStandardMaterial color="#d2c8b6"/></mesh>
+      <mesh position={[3.1,.1,5.15]}><boxGeometry args={[2.55,.1,.12]}/><meshStandardMaterial color="#d2c8b6"/></mesh>
+      {/* low boundary wall and front garden accents */}
+      <mesh position={[-7.5,.42,1.8]}><boxGeometry args={[.22,.84,8.2]}/><meshStandardMaterial color="#bdb5a5"/></mesh>
+      <mesh position={[7.5,.42,1.8]}><boxGeometry args={[.22,.84,8.2]}/><meshStandardMaterial color="#bdb5a5"/></mesh>
+      <mesh position={[-7.5,.88,1.8]}><boxGeometry args={[.3,.1,8.3]}/><meshStandardMaterial color="#8c8b7c"/></mesh>
+      <mesh position={[7.5,.88,1.8]}><boxGeometry args={[.3,.1,8.3]}/><meshStandardMaterial color="#8c8b7c"/></mesh>
     </group>
   );
 }
