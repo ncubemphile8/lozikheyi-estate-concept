@@ -4,7 +4,6 @@ import { Canvas } from "@react-three/fiber";
 import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 import { Suspense } from "react";
 import { RotateCcw } from "lucide-react";
-import * as THREE from "three";
 
 const plaster = "#e6dfd2";
 const charcoal = "#252b2a";
