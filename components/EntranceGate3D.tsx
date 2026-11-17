@@ -6,7 +6,8 @@ import { Suspense } from "react";
 
 function GateStructure() {
   const wall="#c8c0ad", stone="#55534b", gold="#d9b66d", black="#202523";
-  return (\n  <group position={[0,-.5,0]}>
+  return (
+  <group position={[0,-.5,0]}>
     <mesh position={[0,-.12,0]} receiveShadow><boxGeometry args={[30,.22,15]}/><meshStandardMaterial color="#777d68"/></mesh>
     <mesh position={[0,.02,5.5]} receiveShadow><boxGeometry args={[30,.18,4]}/><meshStandardMaterial color="#8c8d83"/></mesh>
     {/* boundary walls and piers */}
@@ -42,5 +43,6 @@ function GateStructure() {
 }
 
 export default function EntranceGate3D() {
- return (\n <div className="entrance-viewer"><Canvas shadows dpr={[1,1.5]} camera={{position:[18,9,20],fov:37}}><color attach="background" args={["#b7b5a9"]}/><fog attach="fog" args={["#b7b5a9",32,75]}/><ambientLight intensity={.8}/><directionalLight position={[10,16,8]} intensity={2.1} castShadow shadow-mapSize-width={2048} shadow-mapSize-height={2048}/><Suspense fallback={null}><GateStructure/><ContactShadows position={[0,-.35,0]} opacity={.45} scale={35} blur={3}/><Environment preset="city"/></Suspense><OrbitControls makeDefault target={[0,2,0]} minDistance={12} maxDistance={40} maxPolarAngle={Math.PI/2.05} enableDamping/></Canvas><div className="entrance-viewer-label">ILLUSTRATIVE ENTRANCE DESIGN · NOT APPROVED DRAWINGS</div></div>;
+ return (
+ <div className="entrance-viewer"><Canvas shadows dpr={[1,1.5]} camera={{position:[18,9,20],fov:37}}><color attach="background" args={["#b7b5a9"]}/><fog attach="fog" args={["#b7b5a9",32,75]}/><ambientLight intensity={.8}/><directionalLight position={[10,16,8]} intensity={2.1} castShadow shadow-mapSize-width={2048} shadow-mapSize-height={2048}/><Suspense fallback={null}><GateStructure/><ContactShadows position={[0,-.35,0]} opacity={.45} scale={35} blur={3}/><Environment preset="city"/></Suspense><OrbitControls makeDefault target={[0,2,0]} minDistance={12} maxDistance={40} maxPolarAngle={Math.PI/2.05} enableDamping/></Canvas><div className="entrance-viewer-label">ILLUSTRATIVE ENTRANCE DESIGN · NOT APPROVED DRAWINGS</div></div>;
 }
