@@ -49,8 +49,8 @@ export default function HomePage() {
         <aside className="availability">
           <div className="availability-title"><Layers3 size={19}/> Stand availability <span>CONCEPT</span></div>
           <button onClick={() => document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"})}><i className="dot available"/>Available <b>Sample</b></button>
-          <button onClick={() => document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"})><i className="dot reserved"/>Reserved <b>Sample</b></button>
-          <button onClick={() => document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"})><i className="dot sold"/>Sold <b>Sample</b></button>
+          <button onClick={() => document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"})}><i className="dot reserved"/>Reserved <b>Sample</b></button>
+          <button onClick={() => document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"})}><i className="dot sold"/>Sold <b>Sample</b></button>
           <div className="availability-divider"/>
           <p><Layers3/> Interactive masterplan</p><p><House/> House design collection</p><p><Download/> Brochure concept</p>
           <small>All statuses are illustrative.</small>
