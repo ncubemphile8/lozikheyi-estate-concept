@@ -62,3 +62,12 @@
 .floorplan-board aside b{font-size:10px;color:#e7e3d9;margin-top:3px}
 .floorplan-board aside p{font-size:10px;line-height:1.8;color:#aeb1a7;margin-top:15px}
 @media(max-width:720px){.floorplan-section{padding:10px 3%}.floorplan-board{grid-template-columns:1fr;padding:10px;gap:8px}.floorplan-board aside{padding:10px}.floorplan-board aside span{font-size:32px}}
+
+.gallery-section{padding:75px 5%;background:#101512}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery-grid figure{margin:0;position:relative;overflow:hidden;border-radius:7px;border:1px solid var(--line);height:250px;background:#242b25}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.gallery-grid figure:hover img{transform:scale(1.04)}
+.gallery-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:35px 15px 14px;background:linear-gradient(transparent,#0c100de8);font-family:'Playfair Display',serif;font-size:17px;color:#f4f0e6}
+.type-note ul{padding-left:18px;color:#c6c8bf;font-size:11px;line-height:2}
+@media(max-width:700px){.gallery-grid{grid-template-columns:1fr}.gallery-grid figure{height:220px}}
