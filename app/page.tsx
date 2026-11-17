@@ -11,11 +11,11 @@ const homes = [
   { type: "TYPE D", name: "The Signature", detail: "4 Bed  ·  3.5 Bath", area: "240 m²", note: "A statement in space", image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=85" },
 ];
 
-const statusColor = (status: PlotStatus) => status === "Available" ? "#9acb4a" : status === "Reserved" ? "#d8a63d" : "#d95b50";
 
 export default function HomePage() {
   const [view, setView] = useState<"3D View" | "2D Map" | "Street View">("2D Map");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [zoom, setZoom] = useState(1);
 
   return (
     <main>
@@ -48,9 +48,9 @@ export default function HomePage() {
         </div>
         <aside className="availability">
           <div className="availability-title"><Layers3 size={19}/> Stand availability <span>CONCEPT</span></div>
-          <button onClick={() => {setFilter("Available"); document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"});}}><i className="dot available"/>Available <b>Sample</b></button>
-          <button onClick={() => {setFilter("Reserved"); document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"});}}><i className="dot reserved"/>Reserved <b>Sample</b></button>
-          <button onClick={() => {setFilter("Sold"); document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"});}}><i className="dot sold"/>Sold <b>Sample</b></button>
+          <button onClick={() => document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"})><i className="dot available"/>Available <b>Sample</b></button>
+          <button onClick={() => document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"})><i className="dot reserved"/>Reserved <b>Sample</b></button>
+          <button onClick={() => document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"})><i className="dot sold"/>Sold <b>Sample</b></button>
           <div className="availability-divider"/>
           <p><Layers3/> Interactive masterplan</p><p><House/> House design collection</p><p><Download/> Brochure concept</p>
           <small>All statuses are illustrative.</small>
@@ -62,7 +62,7 @@ export default function HomePage() {
 
       <section className="homes-strip" id="homes">
         <div className="homes-intro"><p className="eyebrow">DESIGNED FOR DIFFERENT LIVES</p><h2>Explore our<br/><em>house designs.</em></h2><p>Four conceptual home types, from considered essentials to spacious contemporary living.</p><a href="#contact">Discuss a house type <ArrowUpRight size={15}/></a></div>
-        {homes.map((home, i) => <article className="home-card" key={home.type}><div className="home-image" style={{backgroundImage: `url("${home.image}")`}}><span>{home.type}</span><button aria-label={`Explore ${home.name}`} onClick={() => { if (i === 0) window.location.href = "/homes/type-a"; else document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"}); }}><ArrowUpRight/></button></div><div className="home-card-info"><div><h3>{home.name}</h3><p>{home.detail} <span>·</span> {home.area}</p></div><small>{home.note}</small></div></article>)}
+        {homes.map((home, i) => <article className="home-card" key={home.type}><div className="home-image" style={{backgroundImage: `url("${home.image}")`}}><span>{home.type}</span><button aria-label={`Explore ${home.name}`} onClick={() => { window.location.href = `/homes/type-${String.fromCharCode(97+i)}`; }}><ArrowUpRight/></button></div><div className="home-card-info"><div><h3>{home.name}</h3><p>{home.detail} <span>·</span> {home.area}</p></div><small>{home.note}</small></div></article>)}
       </section>
 
       <section className="benefits" id="about">
