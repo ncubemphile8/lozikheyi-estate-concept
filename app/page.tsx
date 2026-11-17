@@ -42,7 +42,7 @@ export default function HomePage() {
           <p className="hero-sub">A residential community concept in<br className="desktop-break"/> 12 km west of Bulawayo CBD, along Khami Road.</p>
           <p className="hero-desc">A residential development by Southland Regional in partnership with NMB Properties. Explore the estate concept, stand information and four contemporary house designs.</p>
           <div className="hero-facts">
-            <div><MapPin/><span><b>Lower Rangemore</b><small>Bulawayo, Zimbabwe</small></span></div>
+            <div><MapPin/><span><b>Lower Rangemore</b><small>Bulawayo, Zimbabwe · Khami Road</small></span></div>
             <div><Layers3/><span><b>216–480 m²</b><small>Illustrative stand range</small></span></div>
             <div><House/><span><b>4 house types</b><small>Concept collection</small></span></div>
           </div>
