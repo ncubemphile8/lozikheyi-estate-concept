@@ -32,7 +32,7 @@ export default function HomePage() {
       </header>
 
       <section className="hero" id="home">
-        <div className="hero-image" />
+        <div className="hero-image" style={{transform: `scale(${zoom})`}} />
         <div className="hero-shade" />
         <div className="hero-copy">
           <p className="eyebrow"><span/> RESIDENTIAL DEVELOPMENT CONCEPT</p>
@@ -48,7 +48,7 @@ export default function HomePage() {
         </div>
         <aside className="availability">
           <div className="availability-title"><Layers3 size={19}/> Stand availability <span>CONCEPT</span></div>
-          <button onClick={() => document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"})><i className="dot available"/>Available <b>Sample</b></button>
+          <button onClick={() => document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"})}><i className="dot available"/>Available <b>Sample</b></button>
           <button onClick={() => document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"})><i className="dot reserved"/>Reserved <b>Sample</b></button>
           <button onClick={() => document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"})><i className="dot sold"/>Sold <b>Sample</b></button>
           <div className="availability-divider"/>
