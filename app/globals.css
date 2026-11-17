@@ -81,3 +81,5 @@
 .concept-room small{font-size:9px;color:#5f685e}
 .concept-plan-footnote{max-width:1000px;margin:12px auto 0;font-size:9px;color:#8f968b;line-height:1.7}
 @media(max-width:600px){.concept-room-grid{gap:5px;padding:8px;border-width:5px}.concept-room{min-height:95px;padding:8px}.concept-room small{font-size:8px}}
+
+.viewer-loading{display:grid;place-items:center;color:#333a32;font-size:12px;letter-spacing:.5px}
