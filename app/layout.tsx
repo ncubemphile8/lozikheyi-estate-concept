@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lozikheyi-estate-concept.vercel.app'),
   title: {
     default: 'Lozikheyi Estate | Residential Development, Bulawayo',
     template: '%s | Lozikheyi Estate',
