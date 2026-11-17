@@ -17,7 +17,6 @@ const homes = [
 export default function HomePage() {
   const [view, setView] = useState<"3D View" | "2D Map" | "Street View">("2D Map");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [zoom, setZoom] = useState(1);
 
   return (
     <main>
@@ -34,7 +33,11 @@ export default function HomePage() {
       </header>
 
       <section className="hero" id="home">
-        <div className="hero-image" style={{transform: `scale(${zoom})`}} />
+        <video className="hero-video" autoPlay muted loop playsInline preload="metadata"
+          poster="https://images.pexels.com/videos/35425068/pexels-photo-35425068.jpeg?auto=compress&w=1260&h=750&dpr=1"
+          aria-label="Illustrative aerial footage of a residential neighbourhood">
+          <source src="https://videos.pexels.com/video-files/35425068/15009305_1920_1080_30fps.mp4" type="video/mp4" />
+        </video>
         <div className="hero-shade" />
         <div className="hero-copy">
           <p className="eyebrow"><span/> RESIDENTIAL DEVELOPMENT CONCEPT</p>
@@ -58,8 +61,7 @@ export default function HomePage() {
           <small>All statuses are illustrative.</small>
         </aside>
         <div className="hero-controls"><button className={view === "3D View" ? "selected" : ""} onClick={() => { setView("3D View"); document.getElementById("entrance")?.scrollIntoView({behavior:"smooth"}); }}><Layers3/> 3D View</button><button className={view === "2D Map" ? "selected" : ""} onClick={() => { setView("2D Map"); document.getElementById("masterplan")?.scrollIntoView({behavior:"smooth"}); }}><Map/> 2D Map</button><button className={view === "Street View" ? "selected" : ""} onClick={() => { setView("Street View"); document.getElementById("entrance")?.scrollIntoView({behavior:"smooth"}); }}><Compass/> Street View</button><span className="view-note">{view === "Street View" ? "Street-view concept" : view === "2D Map" ? "Plan view concept" : "Aerial concept view"}</span></div>
-        <div className="hero-zoom"><button onClick={() => setZoom(Math.max(.85, zoom-.1))}><ZoomOut/></button><button onClick={() => setZoom(Math.min(1.25, zoom+.1))}><ZoomIn/></button></div>
-        <div className="hero-caption">VISUAL CONCEPT · NOT AN APPROVED ESTATE RENDER</div>
+        <div className="hero-caption">STOCK AERIAL REFERENCE · NOT ACTUAL ESTATE FOOTAGE</div>
       </section>
 
       <section className="homes-strip" id="homes">
