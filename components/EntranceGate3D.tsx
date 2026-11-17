@@ -45,5 +45,6 @@ function GateStructure() {
 
 export default function EntranceGate3D() {
  return (
- <div className="entrance-viewer"><Canvas shadows dpr={[1,1.5]} camera={{position:[18,9,20],fov:37}}><color attach="background" args={["#b7b5a9"]}/><fog attach="fog" args={["#b7b5a9",32,75]}/><ambientLight intensity={.8}/><directionalLight position={[10,16,8]} intensity={2.1} castShadow shadow-mapSize-width={2048} shadow-mapSize-height={2048}/><Suspense fallback={null}><GateStructure/><ContactShadows position={[0,-.35,0]} opacity={.45} scale={35} blur={3}/><Environment preset="city"/></Suspense><OrbitControls makeDefault target={[0,2,0]} minDistance={12} maxDistance={40} maxPolarAngle={Math.PI/2.05} enableDamping/></Canvas><div className="entrance-viewer-label">ILLUSTRATIVE ENTRANCE DESIGN · NOT APPROVED DRAWINGS</div></div>;
+ <div className="entrance-viewer"><Canvas shadows dpr={[1,1.5]} camera={{position:[18,9,20],fov:37}}><color attach="background" args={["#b7b5a9"]}/><fog attach="fog" args={["#b7b5a9",32,75]}/><ambientLight intensity={.8}/><directionalLight position={[10,16,8]} intensity={2.1} castShadow shadow-mapSize-width={2048} shadow-mapSize-height={2048}/><Suspense fallback={null}><GateStructure/><ContactShadows position={[0,-.35,0]} opacity={.45} scale={35} blur={3}/><Environment preset="city"/></Suspense><OrbitControls makeDefault target={[0,2,0]} minDistance={12} maxDistance={40} maxPolarAngle={Math.PI/2.05} enableDamping/></Canvas><div className="entrance-viewer-label">ILLUSTRATIVE ENTRANCE DESIGN · NOT APPROVED DRAWINGS</div></div>
+ );
 }
