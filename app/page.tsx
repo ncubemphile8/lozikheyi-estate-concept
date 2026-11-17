@@ -74,6 +74,14 @@ export default function HomePage() {
         <MasterplanExplorer />
       </section>
 
+      <section className="gallery-section" id="gallery">
+        <div className="section-heading"><div><p className="eyebrow">A VISUAL DIRECTION</p><h2>Spaces to <em>imagine.</em></h2><p>Reference imagery for the proposed residential character. These are mood references, not photographs of the estate.</p></div><div className="concept-tag">INSPIRATION GALLERY</div></div>
+        <div className="gallery-grid">
+          <figure><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Contemporary home exterior inspiration"/><figcaption>Contemporary architecture</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Modern open plan living inspiration"/><figcaption>Open-plan living</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85" alt="Residential garden inspiration"/><figcaption>Outdoor connection</figcaption></figure>
+        </div>
+      </section>
       <section className="investment" id="investment"><div><p className="eyebrow">A PLACE TO CALL YOUR OWN</p><h2>Make room for<br/><em>what comes next.</em></h2><p>Explore the concept, discover the home collection and speak with the team about official development information.</p><a className="gold-button" href="#contact">Start a conversation <ArrowRight size={16}/></a></div><div className="investment-image"/></section>
       <section className="contact" id="contact"><p className="eyebrow">LET'S TALK</p><h2>Your next chapter<br/><em>starts here.</em></h2><p>This demonstration is ready to be adapted with official estate details, approved plans and the sales team's contact information.</p><a className="outline-button" href="mailto:hello@vanillawebz.co.za?subject=Lozikheyi%20Estate%20enquiry">Request information <ArrowUpRight size={16}/></a></section>
       <footer><a className="brand footer-brand" href="#home"><span className="brand-mark"><svg viewBox="0 0 72 56"><path d="M5 27 36 5l31 22M14 29v21h44V29M25 50V36l11-8 11 8v14"/></svg></span><span className="brand-name">LOZIKHEYi<span>ESTATE · BULAWAYO</span></span></a><p>Concept experience by <b>VanillaWebz</b></p><small>Independent demonstration · Not an official estate website</small><a href="#home" className="back-top">Back to top ↑</a></footer>
