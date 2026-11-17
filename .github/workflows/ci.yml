@@ -14,5 +14,7 @@ jobs:
         with:
           node-version: 20
       - run: npm install
+      - name: Report dependency audit findings
+        run: npm audit --json > npm-audit.json || true; node -e "const a=require('./npm-audit.json'); for (const [name,v] of Object.entries(a.vulnerabilities||{})) console.log(name + ': ' + v.severity + ', range=' + v.range + ', fix=' + JSON.stringify(v.fixAvailable))"
       - run: npm run lint
       - run: npm run build
