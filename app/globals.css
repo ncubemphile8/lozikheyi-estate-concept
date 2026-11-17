@@ -71,3 +71,13 @@
 .gallery-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:35px 15px 14px;background:linear-gradient(transparent,#0c100de8);font-family:'Playfair Display',serif;font-size:17px;color:#f4f0e6}
 .type-note ul{padding-left:18px;color:#c6c8bf;font-size:11px;line-height:2}
 @media(max-width:700px){.gallery-grid{grid-template-columns:1fr}.gallery-grid figure{height:220px}}
+
+.concept-room-grid{display:grid;gap:8px;max-width:1000px;margin:0 auto;padding:16px;background:#e6e0d3;border:8px solid #353d37;border-radius:4px}
+.concept-room{min-height:125px;padding:14px;background:#d0c8b8;border:2px solid #657064;display:flex;flex-direction:column;justify-content:space-between;color:#273029}
+.concept-room:nth-child(3n+2){background:#d9d2c5}
+.concept-room:nth-child(4n){background:#c7d0c1}
+.concept-room span{font-size:9px;color:#7b6a4c;letter-spacing:1px}
+.concept-room b{font-size:clamp(9px,1.1vw,14px);letter-spacing:.5px}
+.concept-room small{font-size:9px;color:#5f685e}
+.concept-plan-footnote{max-width:1000px;margin:12px auto 0;font-size:9px;color:#8f968b;line-height:1.7}
+@media(max-width:600px){.concept-room-grid{gap:5px;padding:8px;border-width:5px}.concept-room{min-height:95px;padding:8px}.concept-room small{font-size:8px}}
