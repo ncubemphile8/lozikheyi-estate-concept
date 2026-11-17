@@ -39,11 +39,11 @@ export default function HomePage() {
         <div className="hero-copy">
           <p className="eyebrow"><span/> RESIDENTIAL DEVELOPMENT CONCEPT</p>
           <h1>Lozikheyi<br/><em>Estate.</em></h1>
-          <p className="hero-sub">A residential community concept in<br className="desktop-break"/> Lower Rangemore, Bulawayo.</p>
-          <p className="hero-desc">Discover the proposed entrance, explore illustrative stand layouts and experience four contemporary home concepts.</p>
+          <p className="hero-sub">A residential community concept in<br className="desktop-break"/> 12 km west of Bulawayo CBD, along Khami Road.</p>
+          <p className="hero-desc">A residential development by Southland Regional in partnership with NMB Properties. Explore the estate concept, stand information and four contemporary house designs.</p>
           <div className="hero-facts">
             <div><MapPin/><span><b>Lower Rangemore</b><small>Bulawayo, Zimbabwe</small></span></div>
-            <div><Layers3/><span><b>216–526 m²</b><small>Illustrative stand range</small></span></div>
+            <div><Layers3/><span><b>216–480 m²</b><small>Illustrative stand range</small></span></div>
             <div><House/><span><b>4 house types</b><small>Concept collection</small></span></div>
           </div>
           <div className="hero-actions"><a className="gold-button" href="#masterplan">Explore masterplan <ArrowRight size={17}/></a><a className="outline-button" href="#homes"><Play size={15}/> Discover house designs</a></div>
@@ -85,18 +85,18 @@ export default function HomePage() {
           <figure><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85" alt="Residential garden inspiration"/><figcaption>Outdoor connection</figcaption></figure>
         </div>
       </section>
-      <section className="investment" id="investment"><div><p className="eyebrow">A PLACE TO CALL YOUR OWN</p><h2>Make room for<br/><em>what comes next.</em></h2><p>Explore the concept, discover the home collection and speak with the team about official development information.</p><a className="gold-button" href="#contact">Start a conversation <ArrowRight size={16}/></a></div><div className="investment-image"/></section>
+      <section className="investment" id="investment"><div><p className="eyebrow">A PLACE TO CALL YOUR OWN</p><h2>Make room for<br/><em>what comes next.</em></h2><p>Advertised stand pricing starts at US$35/m², with stands from US$7,560. The published payment plan is a 30% deposit plus a US$400 administration fee, with the balance payable over 12 months. Prices include VAT. Confirm current prices, stand sizes and payment terms directly with the estate team.</p><a className="gold-button" href="#contact">Request current pricing <ArrowRight size={16}/></a></div><div className="investment-image"/></section>
       <section className="faq-section" id="faq">
         <div className="section-heading"><div><p className="eyebrow">HELPFUL INFORMATION</p><h2>Good to <em>know.</em></h2><p>A few useful starting points before you make an enquiry.</p></div><div className="concept-tag">DEVELOPMENT DETAILS TO BE CONFIRMED</div></div>
         <div className="faq-list">
           <details><summary>How do I request a quotation?</summary><p>Use the WhatsApp quote button below or call the supplied contact number. Share whether your enquiry is about a stand, a house design or another development requirement.</p></details>
           <details><summary>Are the stands shown on the masterplan available?</summary><p>No live availability is connected to this demonstration. Plot positions, sizes and status colours are sample data only. Ask the estate team for the current approved availability schedule.</p></details>
           <details><summary>Are the house designs approved construction plans?</summary><p>No. The four house types are architectural concepts for presentation. They require professional design development, site-specific checks and the appropriate approvals before construction.</p></details>
-          <details><summary>Where can I get confirmed pricing and servicing information?</summary><p>Contact the estate team directly. Pricing, stand dimensions, title and servicing information should be confirmed from current official estate documentation.</p></details>
+          <details><summary>Where can I get confirmed pricing and servicing information?</summary><p>The supplied listing advertises US$35/m², with stands from US$7,560, a 30% deposit plus a US$400 administration fee, and the balance over 12 months (VAT included). Confirm that these prices and terms are still current, together with stand availability, title and servicing documentation.</p></details>
         </div>
       </section>
-      <section className="contact" id="contact"><p className="eyebrow">LET'S TALK</p><h2>Your next chapter<br/><em>starts here.</em></h2><p>Interested in a stand, a house design or a development quotation? Contact the team directly on WhatsApp. Official availability, pricing and servicing details will be confirmed by the estate.</p><div className="contact-actions"><a className="gold-button" href="https://wa.me/263790033586?text=Hello%2C%20I%27d%20like%20to%20request%20a%20quote%20and%20more%20information%20about%20Lozikheyi%20Estate." target="_blank" rel="noopener noreferrer">Request a quote on WhatsApp <ArrowUpRight size={16}/></a><a className="outline-button" href="tel:+263790033586">Call +263 79 003 3586</a></div></section>
-      <footer><a className="brand footer-brand" href="#home"><span className="brand-mark"><svg viewBox="0 0 72 56"><path d="M5 27 36 5l31 22M14 29v21h44V29M25 50V36l11-8 11 8v14"/></svg></span><span className="brand-name">LOZIKHEYi<span>ESTATE · BULAWAYO</span></span></a><p>Enquiries: <a href="https://wa.me/263790033586" target="_blank" rel="noopener noreferrer">+263 79 003 3586</a> · Concept experience by <b>VanillaWebz</b></p><small>Independent demonstration · Not an official estate website</small><a href="#home" className="back-top">Back to top ↑</a></footer>
+      <section className="contact" id="contact"><p className="eyebrow">LET'S TALK</p><h2>Your next chapter<br/><em>starts here.</em></h2><p>Interested in a stand, a house design or a development quotation? The development is promoted by Southland Regional in partnership with NMB Properties. WhatsApp or call the contacts below to confirm current availability, pricing and servicing details.</p><div className="contact-actions"><a className="gold-button" href="https://wa.me/263790033586?text=Hello%2C%20I%27d%20like%20to%20request%20a%20quote%20and%20more%20information%20about%20Lozikheyi%20Estate." target="_blank" rel="noopener noreferrer">Request a quote on WhatsApp <ArrowUpRight size={16}/></a><a className="outline-button" href="tel:+263773795366">Call 077 379 5366</a></div></section>
+      <footer><a className="brand footer-brand" href="#home"><span className="brand-mark"><svg viewBox="0 0 72 56"><path d="M5 27 36 5l31 22M14 29v21h44V29M25 50V36l11-8 11 8v14"/></svg></span><span className="brand-name">LOZIKHEYi<span>ESTATE · BULAWAYO</span></span></a><p>Enquiries: <a href="https://wa.me/263790033586" target="_blank" rel="noopener noreferrer">+263 790 033 586</a> · Calls: <a href="tel:+263773795366">077 379 5366</a> · Concept experience by <b>VanillaWebz</b></p><small>Independent demonstration · Not an official estate website</small><a href="#home" className="back-top">Back to top ↑</a></footer>
     </main>
   );
 }
