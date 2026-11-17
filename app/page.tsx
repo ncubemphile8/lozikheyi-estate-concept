@@ -1,23 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
+import MasterplanExplorer from "../components/MasterplanExplorer";
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronDown, Compass, Download, Filter, House, Layers3, Map, MapPin, Menu, Play, ShieldCheck, Trees, Waves, X, Zap, ZoomIn, ZoomOut } from "lucide-react";
-
-type PlotStatus = "Available" | "Reserved" | "Sold";
-type Plot = { id: string; status: PlotStatus; size: number; price: string; x: number; y: number };
-
-const plots: Plot[] = [
-  { id: "A01", status: "Available", size: 300, price: "Illustrative", x: 18, y: 35 },
-  { id: "A02", status: "Available", size: 320, price: "Illustrative", x: 29, y: 23 },
-  { id: "A03", status: "Reserved", size: 280, price: "Illustrative", x: 40, y: 39 },
-  { id: "B01", status: "Available", size: 350, price: "Illustrative", x: 54, y: 24 },
-  { id: "B02", status: "Sold", size: 310, price: "Illustrative", x: 66, y: 38 },
-  { id: "B03", status: "Available", size: 400, price: "Illustrative", x: 78, y: 25 },
-  { id: "C01", status: "Reserved", size: 450, price: "Illustrative", x: 22, y: 68 },
-  { id: "C02", status: "Available", size: 526, price: "Illustrative", x: 42, y: 73 },
-  { id: "C03", status: "Available", size: 216, price: "Illustrative", x: 62, y: 68 },
-  { id: "C04", status: "Sold", size: 275, price: "Illustrative", x: 82, y: 73 },
-];
 
 const homes = [
   { type: "TYPE A", name: "The Starter", detail: "2 Bed  ·  1 Bath", area: "75 m²", note: "Thoughtfully compact", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" },
@@ -29,12 +14,8 @@ const homes = [
 const statusColor = (status: PlotStatus) => status === "Available" ? "#9acb4a" : status === "Reserved" ? "#d8a63d" : "#d95b50";
 
 export default function HomePage() {
-  const [view, setView] = useState<"3D View" | "2D Map" | "Street View">("3D View");
-  const [filter, setFilter] = useState<"All" | PlotStatus>("All");
-  const [selected, setSelected] = useState<Plot | null>(null);
+  const [view, setView] = useState<"3D View" | "2D Map" | "Street View">("2D Map");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [zoom, setZoom] = useState(1);
-  const visiblePlots = useMemo(() => plots.filter(p => filter === "All" || p.status === filter), [filter]);
 
   return (
     <main>
@@ -90,22 +71,7 @@ export default function HomePage() {
 
       <section className="masterplan-section" id="masterplan">
         <div className="section-heading"><div><p className="eyebrow">EXPLORE THE DEVELOPMENT</p><h2>A closer look at <em>the plan.</em></h2><p>Select a sample plot to preview how an interactive estate explorer could work.</p></div><div className="concept-tag">DEMONSTRATION DATA ONLY</div></div>
-        <div className="masterplan-layout">
-          <div className={`plan-canvas ${view === "2D Map" ? "plan-flat" : ""}`} style={{"--plan-zoom":zoom} as React.CSSProperties}>
-            <div className="plan-road road-one"/><div className="plan-road road-two"/><div className="plan-road road-three"/>
-            <div className="plan-green green-one"/><div className="plan-green green-two"/>
-            {visiblePlots.map(plot => <button key={plot.id} className={selected?.id === plot.id ? "plot-pin plot-selected" : "plot-pin"} style={{left:`${plot.x}%`,top:`${plot.y}%`,"--pin":statusColor(plot.status)} as React.CSSProperties} onClick={() => setSelected(plot)}>{plot.id}</button>)}
-            <div className="plan-label">LOZIKHEYi <span>ESTATE CONCEPT</span></div>
-            <div className="plan-compass">N <Compass/></div>
-            <div className="plan-legend"><span><i className="dot available"/> Available</span><span><i className="dot reserved"/> Reserved</span><span><i className="dot sold"/> Sold</span></div>
-          </div>
-          <aside className="plot-panel">
-            <div className="plot-panel-top"><div><p className="eyebrow">PLOT EXPLORER</p><h3>{selected ? selected.id : "Select a plot"}</h3></div><Filter size={18}/></div>
-            <div className="filter-row">{(["All","Available","Reserved","Sold"] as const).map(f=><button key={f} className={filter===f?"filter-active":""} onClick={()=>{setFilter(f);setSelected(null)}}>{f}</button>)}</div>
-            {selected ? <div className="plot-details"><span className="status-pill" style={{"--pin":statusColor(selected.status)} as React.CSSProperties}>{selected.status}</span><div className="plot-size">{selected.size} <small>m²</small></div><p>Illustrative stand size</p><div className="detail-line"><span>Plot reference</span><b>{selected.id}</b></div><div className="detail-line"><span>Indicative price</span><b>To be confirmed</b></div><button className="gold-button full" onClick={()=>document.getElementById("contact")?.scrollIntoView({behavior:"smooth"})}>Enquire about this plot <ArrowRight size={16}/></button></div> : <div className="plot-empty"><Layers3/><p>Choose any highlighted plot on the plan to view its sample details.</p></div>}
-            <small className="panel-disclaimer">Plot positions, sizes, statuses and prices are fictional demonstration data. They do not represent the approved Lozikheyi Estate layout.</small>
-          </aside>
-        </div>
+        <MasterplanExplorer />
       </section>
 
       <section className="investment" id="investment"><div><p className="eyebrow">A PLACE TO CALL YOUR OWN</p><h2>Make room for<br/><em>what comes next.</em></h2><p>Explore the concept, discover the home collection and speak with the team about official development information.</p><a className="gold-button" href="#contact">Start a conversation <ArrowRight size={16}/></a></div><div className="investment-image"/></section>
