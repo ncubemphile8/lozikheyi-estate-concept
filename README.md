@@ -7,7 +7,7 @@ An independent, non-commercial website concept prepared to demonstrate an intera
 - Clickable illustrative SVG masterplan with plot filtering, selection and zoom
 - Four separate house-type pages
 - Interactive Three.js house viewers with orbit rotation and zoom
-- Type A conceptual two-bedroom floor-plan diagram
+- Conceptual floor-plan / room-zoning diagrams for all four house types
 - Visual inspiration gallery
 - Contact call-to-action placeholders
 
