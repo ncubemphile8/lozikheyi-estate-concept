@@ -18,7 +18,7 @@ function GateStructure() {
     <mesh position={[0,4.4,0]} castShadow><boxGeometry args={[14,.8,2.4]}/><meshStandardMaterial color={stone}/></mesh>
     <mesh position={[-6.6,2.4,0]} castShadow><boxGeometry args={[.8,4.8,2.4]}/><meshStandardMaterial color={stone}/></mesh>
     <mesh position={[6.6,2.4,0]} castShadow><boxGeometry args={[.8,4.8,2.4]}/><meshStandardMaterial color={stone}/></mesh>
-    <mesh position={[0,4.82,0]}><boxGeometry args={[14.4,.12,2.7]}/><meshStandardMaterial color={gold} metalness:.25/></mesh>
+    <mesh position={[0,4.82,0]}><boxGeometry args={[14.4,.12,2.7]}/><meshStandardMaterial color={gold} metalness={.25}/></mesh>
     {/* signage monument on right */}
     <mesh position={[9.2,1.75,-.15]} castShadow><boxGeometry args={[4.3,3.5,1.15]}/><meshStandardMaterial color={stone}/></mesh>
     <mesh position={[9.2,1.75,.46]}><boxGeometry args={[3.75,2.95,.035]}/><meshStandardMaterial color="#333630"/></mesh>
